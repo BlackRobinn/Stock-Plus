@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <div class="header">
+          <span>Cadastro de Produtos</span>
+          <button onclick="openModal()" id="new">Inserir Produto</button>
+        </div>
+    
+        <div class="divTable">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome do Produto</th>
+                <th>Tamanho/Número</th>
+                <th>Cor</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th class="acao">Editar</th>
+                <th class="acao">Excluir</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+    
+        <div class="modal-container">
+          <div class="modal">
+            <form>
+              <label for="m-titulo">Nome do Produto</label>
+              <select id="m-titulo" required>
+                <option value="short">Short</option>
+                <option value="blusa">Blusa</option>
+                <option value="camiseta">Camiseta</option>
+                <option value="calcinha">Calcinha</option>
+                <option value="cueca">Cueca</option>
+                <option value="calça">Calça</option>
+                <option value="saia">Saia</option>
+                <option value="vestido">Vestido</option>
+                <option value="biquini">Biquíni</option>
+                <!-- Adicione mais itens conforme necessário -->
+              </select>
+    
+              <label for="m-tamanho">Tamanho/Número</label>
+              <select id="m-tamanho" required>
+                <option value="PP">PP</option>
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+                <option value="34">34</option>
+                <option value="36">36</option>
+                <option value="38">38</option>
+                <option value="40">40</option>
+                <option value="42">42</option>
+                <option value="44">44</option>
+                <!-- Adicione outros tamanhos/números conforme necessário -->
+              </select>
+    
+              <label for="m-cor">Cor</label>
+              <select id="m-cor" required>
+                <option value="Preto">Preto</option>
+                <option value="Branco">Branco</option>
+                <option value="Azul">Azul</option>
+                <option value="Vermelho">Vermelho</option>
+                <!-- Adicione outras cores conforme necessário -->
+              </select>
+    
+              <label for="m-preco">Preço</label>
+              <input id="m-preco" type="text" required oninput="formatarMoeda(this)" />
+    
+              <label for="m-quantidade">Quantidade</label>
+              <input id="m-quantidade" type="number" min="1" required />
+    
+              <p id="quantidade-disponivel">Peças disponíveis: <span id="pecas-disponiveis"></span></p>
+    
+              <button id="btnSalvar">Salvar</button>
+            </form>
+          </div>
+        </div>
+    
+      </main>
+    
+    
+    
+    
+      <div class="content">
+        <!-- Cabeçalho -->
+      </div>
+    
+      <div class="footer">
+    
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo" />
+        </div>
+    
+      </div>
+
+      <script src="script.js"></script>
+
+</body>
+</html>
